@@ -10,6 +10,11 @@ const { Pool } = require('pg'); // Import Pool correctly
 const app = express();
 const port = 5021;
 
+app.use(cors({
+    origin: 'http://localhost:3000' // React frontend URL
+}));
+
+
 // Middleware setup
 app.use(bodyParser.json());
 app.use(cors());
